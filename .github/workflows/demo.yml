@@ -8,5 +8,6 @@ jobs:
     steps:
     - run: echo "Hello world!!!"
     - uses: actions/checkout@main
+    - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
