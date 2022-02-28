@@ -16,5 +16,5 @@ jobs:
         login-server: pfrdemo.azurecr.io
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
-    - run: docker build -t pfrdemo.azurecr.io/demo
+    - run: docker build . -t pfrdemo.azurecr.io/demo
     - run: docker push pfrdemo.azurecr.io/demo
